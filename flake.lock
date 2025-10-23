@@ -1,5 +1,17 @@
 {
   "nodes": {
+    "nix-dev": {
+      "flake": false,
+      "locked": {
+        "path": "./nix-dev",
+        "type": "path"
+      },
+      "original": {
+        "path": "./nix-dev",
+        "type": "path"
+      },
+      "parent": []
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1759770925,
@@ -18,6 +30,7 @@
     },
     "root": {
       "inputs": {
+        "nix-dev": "nix-dev",
         "nixpkgs": "nixpkgs"
       }
     }

@@ -6,6 +6,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/674c2b09c59a220204350ced584cadaacee30038";
+    nix-dev = {
+      url = "path:./nix-dev";
+      flake = false;
+    };
   };
 
   outputs =
@@ -15,7 +19,7 @@
       ...
     }:
     let
-      nix-dev = import ./nix-dev;
+      nix-dev = import inputs.nix-dev.outPath;
       inputsCombined = nix-dev.inputs // inputs;
 
       systemPlatform = {
